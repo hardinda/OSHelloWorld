@@ -2,7 +2,6 @@
 const express = require('express');
 var path = require('path');
 
-npm install express
 
 //Starting Express app
 const app = express();
