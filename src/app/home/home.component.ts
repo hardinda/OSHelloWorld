@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppConfigService } from '../services/app-config.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+URLValue:any;
+
+  constructor(private config: AppConfigService) {
+    this.URLValue = this.config.getConfig();
+  }
 
   ngOnInit() {
+    //this.URLValue = this.config.getConfig();
   }
 
 }
