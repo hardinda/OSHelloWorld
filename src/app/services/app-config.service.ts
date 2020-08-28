@@ -20,4 +20,10 @@ export class AppConfigService {
   getConfig() {
     return this.config;
   }
+
+reloadConfig(){
+  this.loadConfig();
+}
+
+
 }
