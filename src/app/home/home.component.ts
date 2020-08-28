@@ -15,6 +15,7 @@ URLValue:any;
   }
 
   ngOnInit() {
+    this.config.loadConfig();
     this.URLValue = this.config.getConfig();
   }
 

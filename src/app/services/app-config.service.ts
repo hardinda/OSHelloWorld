@@ -21,4 +21,8 @@ export class AppConfigService {
     return this.config;
   }
 
+  clearConfig(){
+    this.config=null;
+  }
+
 }
