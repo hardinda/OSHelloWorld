@@ -21,9 +21,4 @@ export class AppConfigService {
     return this.config;
   }
 
-reloadConfig(){
-  this.loadConfig();
-}
-
-
 }

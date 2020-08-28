@@ -1,5 +1,3 @@
 {
-    "server1": "some_url",
-    "server2": "url2",
-    "server3": "url3"
+    "server1": "some_enpoint"
 }
