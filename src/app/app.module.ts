@@ -8,9 +8,9 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { AppConfigService } from './services/app-config.service';
 import { HttpClientModule } from '@angular/common/http';
 
-//export function initConfig(appConfig: AppConfigService) {
-//  return () => appConfig.loadConfig();
-//}
+export function initConfig(appConfig: AppConfigService) {
+  return () => appConfig.loadConfig();
+}
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [{
     provide: APP_INITIALIZER,
-    useFactory: (configService: AppConfigService) =>   function () { return configService.loadConfig() },
+    useFactory: initConfig,
     deps: [AppConfigService],
     multi: true,
   }],
