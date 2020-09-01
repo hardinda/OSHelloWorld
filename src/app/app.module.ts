@@ -8,9 +8,9 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { AppConfigService } from './services/app-config.service';
 import { HttpClientModule } from '@angular/common/http';
 
-export function initConfig(appConfig: AppConfigService) {
-  return () => appConfig.loadConfig();
-}
+//export function initConfig(appConfig: AppConfigService) {
+//  return () => appConfig.loadConfig();
+//}
 
 @NgModule({
   declarations: [
