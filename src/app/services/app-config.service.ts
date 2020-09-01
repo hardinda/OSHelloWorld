@@ -7,7 +7,11 @@ export class AppConfigService {
   private config: any;
   constructor(private http: HttpClient) { }
   public loadConfig() {
-    return this.http.get('/assets/config/config.json')
+
+    let dateTime = Date.now();
+    //this.TheTime = dateTime;
+
+    return this.http.get('/assets/config/config.json?value=' + dateTime)
       .toPromise()
       .then((config: any) => {
         this.config = config;

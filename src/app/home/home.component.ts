@@ -17,9 +17,6 @@ TheTime:any;
 
   ngOnInit() {
     this.URLValue = this.config.getConfig();
-
-    let dateTime = new Date();
-    this.TheTime = dateTime;
   }
 
 }
