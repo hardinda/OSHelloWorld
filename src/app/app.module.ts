@@ -4,13 +4,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { AppConfigService } from './services/app-config.service';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-export function initConfig(appConfig: AppConfigService) {
-  return () => appConfig.loadConfig();
-}
 
 @NgModule({
   declarations: [
@@ -24,16 +20,7 @@ export function initConfig(appConfig: AppConfigService) {
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [{
-    provide: APP_INITIALIZER,
-    useFactory: initConfig,
-    deps: [AppConfigService],
-    multi: true,
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-//useFactory: initConfig,
-//useFactory: (configService: AppConfigurationService) =>   function () { return configService.loadConfiguration() }

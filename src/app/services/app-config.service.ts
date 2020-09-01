@@ -6,12 +6,14 @@ import { HttpClient } from '@angular/common/http';
 export class AppConfigService {
   private config: any;
   constructor(private http: HttpClient) { }
+
+  
   public loadConfig() {
 
-    let dateTime = Date.now();
+    //let dateTime = Date.now();
     //this.TheTime = dateTime;
 
-    return this.http.get('/assets/config/config.json?value=' + dateTime)
+    return this.http.get('/assets/config/config.json')
       .toPromise()
       .then((config: any) => {
         this.config = config;
@@ -30,3 +32,4 @@ export class AppConfigService {
   }
 
 }
+ 
