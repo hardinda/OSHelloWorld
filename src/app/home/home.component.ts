@@ -11,11 +11,11 @@ export class HomeComponent implements OnInit {
 URLValue:any;
 
   constructor(private config: AppConfigService) {
-    this.URLValue = this.config.getConfig();
+    //this.URLValue = this.config.getConfig();
   }
 
   ngOnInit() {
-    //this.URLValue = this.config.getConfig();
+    this.URLValue = this.config.getConfig();
   }
 
 }
