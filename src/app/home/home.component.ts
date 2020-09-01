@@ -9,6 +9,7 @@ import { AppConfigService } from '../services/app-config.service';
 export class HomeComponent implements OnInit {
 
 URLValue:any;
+TheTime:any;
 
   constructor(private config: AppConfigService) {
     //this.URLValue = this.config.getConfig();
@@ -16,6 +17,9 @@ URLValue:any;
 
   ngOnInit() {
     this.URLValue = this.config.getConfig();
+
+    let dateTime = new Date();
+    this.TheTime = dateTime;
   }
 
 }
